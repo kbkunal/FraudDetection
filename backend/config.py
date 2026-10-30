@@ -4,8 +4,9 @@ Pydantic Settings for environment-based configuration.
 """
 
 from pydantic_settings import BaseSettings
-from pydantic import Field
+from pydantic import Field, field_validator
 from functools import lru_cache
+from typing import Any
 
 
 class Settings(BaseSettings):
@@ -41,6 +42,48 @@ class Settings(BaseSettings):
         "http://127.0.0.1:5173",
         "http://localhost:3000",
     ]
+
+    @field_validator("DATABASE_URL", mode="before")
+    @classmethod
+    def assemble_database_url(cls, v: Any) -> str:
+        if not v or not isinstance(v, str) or not v.strip():
+            return "sqlite:///./cybershield.db"
+        val = v.strip()
+        # Render and other providers often provide postgres:// instead of postgresql://
+        # SQLAlchemy 1.4+ and 2.0+ strictly require postgresql:// or postgresql+psycopg2://
+        if val.startswith("postgres://"):
+            val = val.replace("postgres://", "postgresql://", 1)
+        return val
+
+    @field_validator("CORS_ORIGINS", mode="before")
+    @classmethod
+    def assemble_cors_origins(cls, v: Any) -> list[str]:
+        if isinstance(v, str):
+            val = v.strip()
+            if val == "*":
+                return ["*"]
+            if val.startswith("[") and val.endswith("]"):
+                import json
+                try:
+                    parsed = json.loads(val)
+                    if isinstance(parsed, list):
+                        return [str(origin).strip() for origin in parsed if str(origin).strip()]
+                except Exception:
+                    pass
+            # Split comma-separated string (e.g. from Render environment variable)
+            origins = [origin.strip() for origin in val.split(",") if origin.strip()]
+            return origins if origins else [
+                "http://localhost:5173",
+                "http://127.0.0.1:5173",
+                "http://localhost:3000",
+            ]
+        elif isinstance(v, (list, tuple)):
+            return [str(origin).strip() for origin in v if str(origin).strip()]
+        return [
+            "http://localhost:5173",
+            "http://127.0.0.1:5173",
+            "http://localhost:3000",
+        ]
 
     model_config = {"env_file": ".env", "env_file_encoding": "utf-8", "extra": "ignore"}
 

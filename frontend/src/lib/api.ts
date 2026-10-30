@@ -2,8 +2,22 @@ import axios, { AxiosInstance, AxiosResponse, InternalAxiosRequestConfig } from 
 
 // ─── Base client ────────────────────────────────────────────────────────────
 
+/**
+ * Resolves the backend API base URL from the environment.
+ * In development without VITE_API_BASE_URL, defaults to '/api/v1' (routed via Vite proxy).
+ * In production (e.g. Vercel), points to the deployed backend URL (e.g. Render).
+ */
+const resolveBaseUrl = (): string => {
+  const envUrl = import.meta.env.VITE_API_BASE_URL
+  if (!envUrl || typeof envUrl !== 'string' || !envUrl.trim()) {
+    return '/api/v1'
+  }
+  const clean = envUrl.trim().replace(/\/+$/, '')
+  return clean.endsWith('/api/v1') ? clean : `${clean}/api/v1`
+}
+
 const api: AxiosInstance = axios.create({
-  baseURL: '/api/v1',
+  baseURL: resolveBaseUrl(),
   headers: { 'Content-Type': 'application/json' },
   timeout: 30000,
 })
@@ -171,6 +185,8 @@ export const messageApi = {
     api.post<MessageAnalysisResult>('/messages/analyze', payload).then(r => r.data),
   getAnalysis: (id: string) =>
     api.get<MessageAnalysisResult>(`/messages/analyses/${id}`).then(r => r.data),
+  generateReport: (id: string) =>
+    api.post(`/messages/analyses/${id}/report`, {}, { responseType: 'blob' }).then(r => r.data),
 }
 
 // ─── Email API ───────────────────────────────────────────────────────────────
@@ -187,6 +203,8 @@ export const emailApi = {
   },
   getAnalysis: (id: string) =>
     api.get<EmailAnalysisResult>(`/emails/analyses/${id}`).then(r => r.data),
+  generateReport: (id: string) =>
+    api.post(`/emails/analyses/${id}/report`, {}, { responseType: 'blob' }).then(r => r.data),
 }
 
 // ─── Help API ────────────────────────────────────────────────────────────────

@@ -13,15 +13,23 @@ from config import settings
 # ---------------------------------------------------------------------------
 # Engine
 # ---------------------------------------------------------------------------
-connect_args = {}
+engine_kwargs = {
+    "echo": settings.ENVIRONMENT == "development",
+}
+
 if settings.DATABASE_URL.startswith("sqlite"):
-    # SQLite requires check_same_thread=False for FastAPI's async use
-    connect_args["check_same_thread"] = False
+    # SQLite requires check_same_thread=False for FastAPI's async thread use
+    engine_kwargs["connect_args"] = {"check_same_thread": False}
+else:
+    # PostgreSQL / Cloud production connection pooling settings
+    engine_kwargs["pool_pre_ping"] = True
+    engine_kwargs["pool_size"] = 10
+    engine_kwargs["max_overflow"] = 20
+    engine_kwargs["pool_recycle"] = 300
 
 engine = create_engine(
     settings.DATABASE_URL,
-    connect_args=connect_args,
-    echo=settings.ENVIRONMENT == "development",
+    **engine_kwargs,
 )
 
 # Enable WAL mode and foreign keys for SQLite

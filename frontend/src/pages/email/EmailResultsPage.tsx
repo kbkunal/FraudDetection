@@ -28,12 +28,8 @@ export function EmailResultsPage() {
     if (!analysisId) return
     setDownloading(true)
     try {
-      const response = await fetch(`/api/v1/emails/analyses/${analysisId}/report`, {
-        method: 'POST',
-      })
-      if (!response.ok) throw new Error()
-      const blob = await response.blob()
-      const url = window.URL.createObjectURL(blob)
+      const blob: any = await emailApi.generateReport(analysisId)
+      const url = window.URL.createObjectURL(new Blob([blob], { type: 'application/pdf' }))
       const link = document.createElement('a')
       link.href = url
       link.setAttribute('download', `cybershield-email-${analysisId.slice(0, 8)}.pdf`)
