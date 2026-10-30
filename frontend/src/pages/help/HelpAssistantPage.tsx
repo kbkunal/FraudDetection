@@ -113,13 +113,12 @@ export function HelpAssistantPage() {
             className={`flex flex-col ${m.sender === 'user' ? 'items-end' : 'items-start'}`}
           >
             <div
-              className={`max-w-[85%] p-4 rounded-sm text-xs space-y-2 ${
-                m.sender === 'user'
-                  ? 'bg-neutral-900 text-white'
+              className={`max-w-[85%] p-4 rounded-sm text-xs space-y-2 ${m.sender === 'user'
+                  ? 'bg-brand-500 text-white'
                   : m.emergency
-                  ? 'bg-red-50 border border-red-300 text-red-950'
-                  : 'bg-white border border-neutral-200 text-neutral-800'
-              }`}
+                    ? 'bg-red-50 border border-red-300 text-red-950'
+                    : 'bg-white border border-neutral-200 text-neutral-800'
+                }`}
             >
               <div className="whitespace-pre-line leading-relaxed">{m.text}</div>
 
@@ -146,7 +145,7 @@ export function HelpAssistantPage() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Ask a question about filing procedures, banking disputes, or scams..."
-          className="flex-1 px-3 py-2 border border-neutral-200 rounded-sm text-xs focus:outline-none focus:border-brand-500"
+          className="flex-1 px-3 py-2 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm text-xs focus:outline-none focus:border-brand-500"
         />
         <button
           type="submit"

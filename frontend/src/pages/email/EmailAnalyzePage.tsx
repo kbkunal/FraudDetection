@@ -113,7 +113,7 @@ export function EmailAnalyzePage() {
               onChange={(e) => setFromAddress(e.target.value)}
               placeholder="e.g. security@sbi-alerts.xyz"
               required
-              className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+              className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
             />
           </div>
 
@@ -124,7 +124,7 @@ export function EmailAnalyzePage() {
               value={replyTo}
               onChange={(e) => setReplyTo(e.target.value)}
               placeholder="e.g. collector@scam-mail.com"
-              className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+              className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
             />
           </div>
         </div>
@@ -138,7 +138,7 @@ export function EmailAnalyzePage() {
               onChange={(e) => setSubject(e.target.value)}
               placeholder="Email subject line"
               required
-              className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+              className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
             />
           </div>
 
@@ -149,7 +149,7 @@ export function EmailAnalyzePage() {
               value={claimedOrg}
               onChange={(e) => setClaimedOrg(e.target.value)}
               placeholder="e.g. HDFC Bank, Income Tax Dept"
-              className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+              className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
             />
           </div>
         </div>
@@ -162,7 +162,7 @@ export function EmailAnalyzePage() {
             onChange={(e) => setBody(e.target.value)}
             placeholder="Paste raw email message body text here..."
             required
-            className="w-full px-3 py-2 border border-neutral-200 rounded-sm text-xs font-mono focus:outline-none focus:border-brand-500"
+            className="w-full px-3 py-2 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm text-xs font-mono focus:outline-none focus:border-brand-500"
           />
         </div>
 

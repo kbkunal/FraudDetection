@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    color-scheme: light !important;
+  }
+
   html {
+    color-scheme: light !important;
     font-family: 'IBM Plex Sans', system-ui, sans-serif;
     color: #17202B;
     background-color: #FFFFFF;
@@ -16,6 +21,45 @@
   :focus-visible {
     outline: 2px solid #1457C5;
     outline-offset: 2px;
+  }
+
+  /* Universal high-contrast, pure-light input & form styling */
+  input,
+  textarea,
+  select {
+    color-scheme: light !important;
+    background-color: #FFFFFF !important;
+    color: #0F172A !important;
+    caret-color: #1457C5 !important;
+  }
+
+  input:disabled,
+  textarea:disabled,
+  select:disabled {
+    background-color: #F8FAFC !important;
+    color: #64748B !important;
+    cursor: not-allowed;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #94A3B8 !important;
+    opacity: 1 !important;
+  }
+
+  /* Browser autofill override so fields never turn black or yellow */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #0F172A !important;
+    -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset !important;
+    transition: background-color 5000s ease-in-out 0s;
   }
 }
 

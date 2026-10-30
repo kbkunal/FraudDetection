@@ -2,7 +2,7 @@ import React, { InputHTMLAttributes, TextareaHTMLAttributes, SelectHTMLAttribute
 import clsx from 'clsx'
 
 const fieldBase =
-  'block w-full rounded-sm border border-neutral-100 bg-white px-3 py-2 text-sm text-neutral-900 placeholder:text-neutral-400 ' +
+  'block w-full rounded-sm border border-neutral-200 bg-white px-3 py-2 text-sm text-neutral-900 placeholder:text-neutral-400 ' +
   'focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 ' +
   'disabled:bg-neutral-50 disabled:text-neutral-400 disabled:cursor-not-allowed transition-colors duration-150'
 

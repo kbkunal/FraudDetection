@@ -74,7 +74,7 @@ export function IncidentsPage() {
           </p>
           <button
             onClick={() => setShowCreateModal(true)}
-            className="inline-flex items-center gap-1.5 px-4 py-2 bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-medium rounded-sm"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-brand-500 hover:bg-brand-600 text-white text-xs font-medium rounded-sm transition-colors"
           >
             <Plus size={14} />
             Create Workspace
@@ -121,7 +121,7 @@ export function IncidentsPage() {
                   onChange={(e) => setTitle(e.target.value)}
                   placeholder="e.g. Unauthorized UPI Debit Following Fake Bank SMS"
                   required
-                  className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+                  className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
                 />
               </div>
 
@@ -130,7 +130,7 @@ export function IncidentsPage() {
                 <select
                   value={incidentType}
                   onChange={(e) => setIncidentType(e.target.value)}
-                  className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm bg-white focus:outline-none focus:border-brand-500"
+                  className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm bg-white text-neutral-900 focus:outline-none focus:border-brand-500"
                 >
                   <option value="UPI Financial Fraud">UPI Financial Fraud</option>
                   <option value="Banking Phishing">Banking Phishing</option>
@@ -147,7 +147,7 @@ export function IncidentsPage() {
                   value={narrative}
                   onChange={(e) => setNarrative(e.target.value)}
                   placeholder="Summary of what occurred and approximate timeline..."
-                  className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+                  className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
                 />
               </div>
 

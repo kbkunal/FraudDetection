@@ -73,7 +73,7 @@ export function RegisterPage() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="name@example.com"
               required
-              className="w-full px-3 py-2 border border-neutral-200 rounded-sm text-sm focus:outline-none focus:border-brand-500"
+              className="w-full px-3 py-2 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm text-sm focus:outline-none focus:border-brand-500"
             />
           </div>
 
@@ -85,7 +85,7 @@ export function RegisterPage() {
               onChange={(e) => setUsername(e.target.value)}
               placeholder="investigator_alias"
               required
-              className="w-full px-3 py-2 border border-neutral-200 rounded-sm text-sm focus:outline-none focus:border-brand-500"
+              className="w-full px-3 py-2 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm text-sm focus:outline-none focus:border-brand-500"
             />
           </div>
 
@@ -97,7 +97,7 @@ export function RegisterPage() {
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Create a strong password"
               required
-              className="w-full px-3 py-2 border border-neutral-200 rounded-sm text-sm focus:outline-none focus:border-brand-500"
+              className="w-full px-3 py-2 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm text-sm focus:outline-none focus:border-brand-500"
             />
           </div>
 
@@ -109,7 +109,7 @@ export function RegisterPage() {
               onChange={(e) => setConfirmPassword(e.target.value)}
               placeholder="Repeat password"
               required
-              className="w-full px-3 py-2 border border-neutral-200 rounded-sm text-sm focus:outline-none focus:border-brand-500"
+              className="w-full px-3 py-2 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm text-sm focus:outline-none focus:border-brand-500"
             />
           </div>
 

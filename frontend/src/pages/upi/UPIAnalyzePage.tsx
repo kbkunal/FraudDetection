@@ -122,7 +122,7 @@ export function UPIAnalyzePage() {
                     value={tx.amount}
                     onChange={(e) => updateRow(idx, 'amount', parseFloat(e.target.value) || 0)}
                     required
-                    className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+                    className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
                   />
                 </div>
 
@@ -133,7 +133,7 @@ export function UPIAnalyzePage() {
                     value={tx.timestamp}
                     onChange={(e) => updateRow(idx, 'timestamp', e.target.value)}
                     required
-                    className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+                    className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
                   />
                 </div>
 
@@ -142,7 +142,7 @@ export function UPIAnalyzePage() {
                   <select
                     value={tx.direction}
                     onChange={(e) => updateRow(idx, 'direction', e.target.value)}
-                    className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm bg-white focus:outline-none focus:border-brand-500"
+                    className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm bg-white text-neutral-900 focus:outline-none focus:border-brand-500"
                   >
                     <option value="SENT">Outgoing (Debit)</option>
                     <option value="RECEIVED">Incoming (Credit)</option>
@@ -154,7 +154,7 @@ export function UPIAnalyzePage() {
                   <select
                     value={tx.status}
                     onChange={(e) => updateRow(idx, 'status', e.target.value)}
-                    className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm bg-white focus:outline-none focus:border-brand-500"
+                    className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm bg-white text-neutral-900 focus:outline-none focus:border-brand-500"
                   >
                     <option value="SUCCESS">SUCCESS</option>
                     <option value="FAILED">FAILED</option>
@@ -171,7 +171,7 @@ export function UPIAnalyzePage() {
                     value={tx.sender_upi || ''}
                     onChange={(e) => updateRow(idx, 'sender_upi', e.target.value)}
                     placeholder="victim@okhdfc"
-                    className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+                    className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
                   />
                 </div>
 
@@ -182,7 +182,7 @@ export function UPIAnalyzePage() {
                     value={tx.recipient_upi || ''}
                     onChange={(e) => updateRow(idx, 'recipient_upi', e.target.value)}
                     placeholder="scammer@ybl"
-                    className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+                    className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
                   />
                 </div>
 
@@ -193,7 +193,7 @@ export function UPIAnalyzePage() {
                     value={tx.transaction_ref || ''}
                     onChange={(e) => updateRow(idx, 'transaction_ref', e.target.value)}
                     placeholder="12-digit UTR"
-                    className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+                    className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
                   />
                 </div>
               </div>

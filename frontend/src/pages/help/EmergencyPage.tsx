@@ -44,7 +44,7 @@ export function EmergencyPage() {
       {/* Step 2: Contact Your Bank */}
       <div className="p-6 bg-white border border-neutral-200 rounded-sm space-y-3">
         <div className="flex items-center gap-2">
-          <span className="w-7 h-7 rounded-full bg-neutral-900 text-white font-bold flex items-center justify-center text-xs">2</span>
+          <span className="w-7 h-7 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center text-xs">2</span>
           <h2 className="text-base font-bold text-neutral-900">Notify Your Bank Immediately</h2>
         </div>
         <p className="text-xs text-neutral-600 leading-relaxed">
@@ -60,7 +60,7 @@ export function EmergencyPage() {
       {/* Step 3: Formal Portal Complaint */}
       <div className="p-6 bg-white border border-neutral-200 rounded-sm space-y-3">
         <div className="flex items-center gap-2">
-          <span className="w-7 h-7 rounded-full bg-neutral-900 text-white font-bold flex items-center justify-center text-xs">3</span>
+          <span className="w-7 h-7 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center text-xs">3</span>
           <h2 className="text-base font-bold text-neutral-900">Register on cybercrime.gov.in</h2>
         </div>
         <p className="text-xs text-neutral-600 leading-relaxed">
@@ -77,11 +77,11 @@ export function EmergencyPage() {
       </div>
 
       {/* Emergency Physical Danger */}
-      <div className="p-4 bg-neutral-900 text-white rounded-sm space-y-2">
-        <div className="font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 text-amber-400">
+      <div className="p-4 bg-brand-900 text-white rounded-sm space-y-2 border border-brand-800">
+        <div className="font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 text-amber-300">
           <ShieldAlert size={14} /> Immediate Physical Danger or Extortion
         </div>
-        <p className="text-xs text-neutral-300 leading-relaxed">
+        <p className="text-xs text-neutral-200 leading-relaxed">
           If you are facing immediate physical harm, threats of violence, kidnapping, or extreme extortion, call <b>112 (ERSS)</b> or visit your nearest local police station immediately.
         </p>
       </div>

@@ -226,7 +226,7 @@ export function AdminPage() {
                   onChange={(e) => setTitle(e.target.value)}
                   placeholder="e.g. Guidance on Limiting Liability Under RBI Guidelines"
                   required
-                  className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+                  className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
                 />
               </div>
 
@@ -238,7 +238,7 @@ export function AdminPage() {
                   onChange={(e) => setContent(e.target.value)}
                   placeholder="Factual, actionable advice quoting official circulars or helplines..."
                   required
-                  className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+                  className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
                 />
               </div>
 
@@ -249,7 +249,7 @@ export function AdminPage() {
                   value={sourceUrl}
                   onChange={(e) => setSourceUrl(e.target.value)}
                   placeholder="https://rbi.org.in/..."
-                  className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+                  className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
                 />
               </div>
 

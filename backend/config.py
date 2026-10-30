@@ -37,7 +37,7 @@ class Settings(BaseSettings):
     API_PREFIX: str = "/api/v1"
 
     # CORS
-    CORS_ORIGINS: list[str] = [
+    CORS_ORIGINS: Any = [
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "http://localhost:3000",
@@ -85,7 +85,11 @@ class Settings(BaseSettings):
             "http://localhost:3000",
         ]
 
-    model_config = {"env_file": ".env", "env_file_encoding": "utf-8", "extra": "ignore"}
+    model_config = {
+        "env_file": [".env", "backend/.env"],
+        "env_file_encoding": "utf-8",
+        "extra": "ignore",
+    }
 
     @property
     def max_file_size_bytes(self) -> int:

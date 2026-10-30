@@ -19,7 +19,7 @@ export function CategoryGuidePage() {
         if (gRes?.data) setGuideSteps(gRes.data)
         if (cRes?.data) setChecklist(cRes.data)
       })
-      .catch(() => {})
+      .catch(() => { })
       .finally(() => setLoading(false))
   }, [category])
 
@@ -62,7 +62,7 @@ export function CategoryGuidePage() {
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2.5">
-                        <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${step.is_critical ? 'bg-red-600 text-white' : 'bg-neutral-800 text-white'}`}>
+                        <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${step.is_critical ? 'bg-red-600 text-white' : 'bg-brand-600 text-white'}`}>
                           {step.step_order || i + 1}
                         </span>
                         <h3 className="text-sm font-bold text-neutral-900">{step.title}</h3>

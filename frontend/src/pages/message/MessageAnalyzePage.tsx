@@ -119,7 +119,7 @@ export function MessageAnalyzePage() {
             onChange={(e) => setText(e.target.value)}
             placeholder="Paste complete message body text here..."
             required
-            className="w-full px-3 py-2 border border-neutral-200 rounded-sm text-xs font-mono focus:outline-none focus:border-brand-500"
+            className="w-full px-3 py-2 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm text-xs font-mono focus:outline-none focus:border-brand-500"
           />
         </div>
 
@@ -129,7 +129,7 @@ export function MessageAnalyzePage() {
             <select
               value={sourceApp}
               onChange={(e) => setSourceApp(e.target.value)}
-              className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm bg-white focus:outline-none focus:border-brand-500"
+              className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm bg-white text-neutral-900 focus:outline-none focus:border-brand-500"
             >
               <option value="SMS">SMS Message</option>
               <option value="WhatsApp">WhatsApp</option>
@@ -145,7 +145,7 @@ export function MessageAnalyzePage() {
               value={senderId}
               onChange={(e) => setSenderId(e.target.value)}
               placeholder="+919876543210 or AD-SBIBNK"
-              className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+              className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
             />
           </div>
 
@@ -154,7 +154,7 @@ export function MessageAnalyzePage() {
             <select
               value={language}
               onChange={(e) => setLanguage(e.target.value)}
-              className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm bg-white focus:outline-none focus:border-brand-500"
+              className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm bg-white text-neutral-900 focus:outline-none focus:border-brand-500"
             >
               <option value="en">English</option>
               <option value="hi">Hindi (हिंदी)</option>
@@ -171,7 +171,7 @@ export function MessageAnalyzePage() {
             value={context}
             onChange={(e) => setContext(e.target.value)}
             placeholder="e.g. Received right after ordering groceries online"
-            className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm text-xs focus:outline-none focus:border-brand-500"
+            className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm text-xs focus:outline-none focus:border-brand-500"
           />
         </div>
 

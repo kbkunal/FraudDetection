@@ -49,7 +49,7 @@ export function Topbar() {
           value={searchVal}
           onChange={e => setSearchVal(e.target.value)}
           placeholder="Search…"
-          className="flex-1 text-sm bg-transparent outline-none placeholder:text-neutral-400 text-neutral-800"
+          className="flex-1 text-sm bg-transparent outline-none placeholder:text-neutral-400 text-neutral-900"
         />
       </div>
 

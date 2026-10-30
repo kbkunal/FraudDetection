@@ -270,7 +270,7 @@ export function IncidentDetailPage() {
                   onChange={(e) => setAnalysisRunId(e.target.value)}
                   placeholder="e.g. 2cf8f101-8b16-423c-999f-b2d5158a158e"
                   required
-                  className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm font-mono text-[11px]"
+                  className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm font-mono text-[11px] focus:outline-none focus:border-brand-500"
                 />
               </div>
 

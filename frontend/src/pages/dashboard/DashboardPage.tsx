@@ -124,7 +124,7 @@ export function DashboardPage() {
             </p>
             <Link
               to="/incidents"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-medium rounded-sm"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-brand-500 hover:bg-brand-600 text-white text-xs font-medium rounded-sm transition-colors"
             >
               <Plus size={13} />
               Create First Incident

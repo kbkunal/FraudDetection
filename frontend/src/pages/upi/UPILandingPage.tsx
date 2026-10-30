@@ -75,7 +75,7 @@ export function UPILandingPage() {
           </div>
           <Link
             to="/upi-fraud/upload"
-            className="inline-flex items-center justify-center gap-2 py-2.5 bg-neutral-900 hover:bg-neutral-800 text-white font-medium text-xs rounded-sm transition-colors"
+            className="inline-flex items-center justify-center gap-2 py-2.5 bg-brand-500 hover:bg-brand-600 text-white font-medium text-xs rounded-sm transition-colors"
           >
             Upload CSV File
             <ArrowRight size={14} />

@@ -111,7 +111,7 @@ export function IncidentSummaryPage() {
               value={incidentDate}
               onChange={(e) => setIncidentDate(e.target.value)}
               required
-              className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+              className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
             />
           </div>
         </div>
@@ -126,7 +126,7 @@ export function IncidentSummaryPage() {
               value={lossAmount}
               onChange={(e) => setLossAmount(e.target.value)}
               placeholder="e.g. 25000"
-              className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+              className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
             />
           </div>
 
@@ -137,7 +137,7 @@ export function IncidentSummaryPage() {
               value={paymentMethod}
               onChange={(e) => setPaymentMethod(e.target.value)}
               placeholder="UPI (PhonePe, GPay), Netbanking..."
-              className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+              className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
             />
           </div>
 
@@ -148,7 +148,7 @@ export function IncidentSummaryPage() {
               value={transactionRef}
               onChange={(e) => setTransactionRef(e.target.value)}
               placeholder="12-digit UTR or reference"
-              className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+              className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
             />
           </div>
         </div>
@@ -160,7 +160,7 @@ export function IncidentSummaryPage() {
             value={complaintRefs}
             onChange={(e) => setComplaintRefs(e.target.value)}
             placeholder="e.g. 1930 Ack: CFCFRMS-981290, Bank Dispute: DISP-2024-819"
-            className="w-full px-2.5 py-1.5 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
+            className="w-full px-2.5 py-1.5 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500"
           />
         </div>
 
@@ -172,7 +172,7 @@ export function IncidentSummaryPage() {
             onChange={(e) => setNarrative(e.target.value)}
             placeholder="Chronological sequence: When did the call or message arrive? What did the caller claim? How was the transfer authorized? What actions have you taken so far?"
             required
-            className="w-full px-3 py-2 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500 text-xs"
+            className="w-full px-3 py-2 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500 text-xs"
           />
         </div>
 
@@ -183,7 +183,7 @@ export function IncidentSummaryPage() {
             value={evidenceNotes}
             onChange={(e) => setEvidenceNotes(e.target.value)}
             placeholder="List preserved screenshots, caller numbers (+91...), sender email addresses, bank statements downloaded, etc."
-            className="w-full px-3 py-2 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500 text-xs"
+            className="w-full px-3 py-2 bg-white text-neutral-900 placeholder:text-neutral-400 border border-neutral-200 rounded-sm focus:outline-none focus:border-brand-500 text-xs"
           />
         </div>
 
