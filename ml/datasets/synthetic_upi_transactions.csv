@@ -1,0 +1,50 @@
+# Synthetic UPI Transaction Dataset
+# CyberShield Prototype — Clearly labelled synthetic data for development and testing
+# This is NOT real transaction data. All UPI IDs, amounts, and references are fictional.
+# Do NOT use synthetic performance metrics as real-world fraud detection accuracy claims.
+
+transaction_ref,timestamp,amount,currency,status,direction,sender_upi,recipient_upi,bank_name,scenario_label,notes
+TXN20241001A001,2024-10-01 09:15:23,5000,INR,SUCCESS,outgoing,user1@okicici,merchant1@okhdfc,ICICI Bank,legitimate,Monthly rent payment
+TXN20241001A002,2024-10-01 10:30:00,250,INR,SUCCESS,outgoing,user1@okicici,swiggy@paytm,ICICI Bank,legitimate,Food delivery
+TXN20241001A003,2024-10-01 14:20:15,1200,INR,SUCCESS,incoming,salary@okaxis,user1@okicici,Axis Bank,legitimate,Salary advance
+TXN20241001A004,2024-10-01 16:45:30,800,INR,SUCCESS,outgoing,user1@okicici,amazon@apl,ICICI Bank,legitimate,Online shopping
+TXN20241001A005,2024-10-02 08:00:00,15000,INR,SUCCESS,outgoing,user1@okicici,landlord2@okhdfc,ICICI Bank,legitimate,Security deposit
+TXN20241001A006,2024-10-02 08:05:00,15000,INR,SUCCESS,outgoing,user1@okicici,unknown1@ybl,ICICI Bank,suspicious_velocity,Same amount same time
+TXN20241001A007,2024-10-02 08:08:00,15000,INR,SUCCESS,outgoing,user1@okicici,unknown2@okhdfc,ICICI Bank,suspicious_velocity,Same amount rapid
+TXN20241001A008,2024-10-02 08:10:00,15000,INR,SUCCESS,outgoing,user1@okicici,unknown3@paytm,ICICI Bank,suspicious_velocity,Pattern continues
+TXN20241001A009,2024-10-02 08:12:00,15000,INR,SUCCESS,outgoing,user1@okicici,unknown4@oksbi,ICICI Bank,suspicious_velocity,Rapid succession
+TXN20241001A010,2024-10-02 08:14:00,15000,INR,SUCCESS,outgoing,user1@okicici,unknown5@ybl,ICICI Bank,suspicious_velocity,One-to-many pattern
+TXN20241002B001,2024-10-03 02:30:00,50000,INR,SUCCESS,outgoing,victim1@oksbi,scammer1@okaxis,SBI,off_hours_large,Large transfer at 2:30 AM
+TXN20241002B002,2024-10-03 02:35:00,49000,INR,SUCCESS,outgoing,victim1@oksbi,scammer2@ybl,SBI,off_hours_large,Rapid follow-up
+TXN20241002B003,2024-10-03 03:15:00,30000,INR,SUCCESS,outgoing,victim1@oksbi,scammer3@okhdfc,SBI,off_hours_large,Same night pattern
+TXN20241003C001,2024-10-04 11:00:00,100,INR,SUCCESS,incoming,sender1@ybl,hub1@okaxis,Yes Bank,many_to_one,Multiple senders
+TXN20241003C002,2024-10-04 11:05:00,200,INR,SUCCESS,incoming,sender2@oksbi,hub1@okaxis,SBI,many_to_one,Aggregating funds
+TXN20241003C003,2024-10-04 11:10:00,150,INR,SUCCESS,incoming,sender3@okhdfc,hub1@okaxis,HDFC Bank,many_to_one,Multiple senders
+TXN20241003C004,2024-10-04 11:15:00,300,INR,SUCCESS,incoming,sender4@paytm,hub1@okaxis,Paytm,many_to_one,Hub account
+TXN20241003C005,2024-10-04 11:20:00,250,INR,SUCCESS,incoming,sender5@okicici,hub1@okaxis,ICICI Bank,many_to_one,Aggregation pattern
+TXN20241003C006,2024-10-04 11:25:00,175,INR,SUCCESS,incoming,sender6@ybl,hub1@okaxis,Yes Bank,many_to_one,Many to one
+TXN20241003C007,2024-10-04 11:45:00,1175,INR,SUCCESS,outgoing,hub1@okaxis,final_dest@oksbi,Axis Bank,many_to_one,Funds consolidated and moved
+TXN20241004D001,2024-10-05 14:00:00,1000,INR,SUCCESS,incoming,victim2@okicici,mule1@ybl,ICICI Bank,mule_chain,Victim sends to mule
+TXN20241004D002,2024-10-05 14:10:00,950,INR,SUCCESS,outgoing,mule1@ybl,mule2@okaxis,Yes Bank,mule_chain,Mule to mule (minus small fee)
+TXN20241004D003,2024-10-05 14:20:00,900,INR,SUCCESS,outgoing,mule2@okaxis,mule3@oksbi,Axis Bank,mule_chain,Chain continues
+TXN20241004D004,2024-10-05 14:30:00,850,INR,SUCCESS,outgoing,mule3@oksbi,final_beneficiary@paytm,SBI,mule_chain,Funds reach final destination
+TXN20241005E001,2024-10-06 09:00:00,99999,INR,SUCCESS,outgoing,victim3@okhdfc,fraud1@ybl,HDFC Bank,round_amount,Just under 1 lakh
+TXN20241005E002,2024-10-06 09:30:00,50000,INR,SUCCESS,outgoing,victim3@okhdfc,fraud2@okicici,HDFC Bank,round_amount,Round 50k
+TXN20241005E003,2024-10-06 10:00:00,25000,INR,SUCCESS,outgoing,victim3@okhdfc,fraud3@oksbi,HDFC Bank,round_amount,Round 25k
+TXN20241005E004,2024-10-07 08:00:00,500,INR,SUCCESS,outgoing,user2@ybl,friend1@okicici,Yes Bank,legitimate,Split dinner bill
+TXN20241005E005,2024-10-07 12:30:00,2500,INR,SUCCESS,outgoing,user2@ybl,amazon@apl,Yes Bank,legitimate,Online purchase
+TXN20241005E006,2024-10-07 18:00:00,100,INR,SUCCESS,outgoing,user2@ybl,petrol_pump@okhdfc,Yes Bank,legitimate,Fuel payment
+TXN20241006F001,2024-10-08 10:00:00,5000,INR,FAILED,outgoing,victim4@okicici,scammer4@paytm,ICICI Bank,failed_fraud_attempt,Failed transaction
+TXN20241006F002,2024-10-08 10:01:00,5000,INR,FAILED,outgoing,victim4@okicici,scammer4@paytm,ICICI Bank,failed_fraud_attempt,Retry of same
+TXN20241006F003,2024-10-08 10:02:00,5000,INR,SUCCESS,outgoing,victim4@okicici,scammer4@paytm,ICICI Bank,failed_fraud_attempt,Third attempt succeeded
+TXN20241007G001,2024-10-09 03:00:00,10000,INR,SUCCESS,outgoing,victim5@oksbi,newaccount1@ybl,SBI,new_recipient_offhours,New recipient + off hours
+TXN20241007G002,2024-10-09 22:00:00,7500,INR,SUCCESS,outgoing,victim5@oksbi,newaccount2@okaxis,SBI,new_recipient_offhours,Late night new recipient
+TXN20241008H001,2024-10-10 10:00:00,1000,INR,SUCCESS,outgoing,user3@okhdfc,gym@okicici,HDFC Bank,legitimate,Gym membership
+TXN20241008H002,2024-10-10 11:00:00,300,INR,SUCCESS,incoming,refund@paytm,user3@okhdfc,Paytm,legitimate,Refund received
+TXN20241008H003,2024-10-10 14:00:00,8000,INR,SUCCESS,outgoing,user3@okhdfc,electricty_board@oksbi,HDFC Bank,legitimate,Electricity bill
+TXN20241009I001,2024-10-11 09:00:00,200000,INR,SUCCESS,outgoing,business1@okaxis,vendor1@oksbi,Axis Bank,legitimate_large,Legitimate business payment
+TXN20241009I002,2024-10-11 09:30:00,150000,INR,SUCCESS,outgoing,business1@okaxis,vendor2@okhdfc,Axis Bank,legitimate_large,Another vendor payment
+TXN20241010J001,2024-10-12 01:00:00,1000,INR,SUCCESS,outgoing,victim6@okicici,scam_upi@ybl,ICICI Bank,digital_arrest_scam,After threatening call
+TXN20241010J002,2024-10-12 01:10:00,5000,INR,SUCCESS,outgoing,victim6@okicici,scam_upi2@ybl,ICICI Bank,digital_arrest_scam,Paid more after threat
+TXN20241010J003,2024-10-12 01:20:00,10000,INR,SUCCESS,outgoing,victim6@okicici,scam_upi3@okaxis,ICICI Bank,digital_arrest_scam,Escalating amounts
+

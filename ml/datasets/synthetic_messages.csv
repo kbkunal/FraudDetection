@@ -1,0 +1,44 @@
+# Synthetic Message Fraud Dataset
+# CyberShield Prototype — Clearly labelled synthetic data
+# NOT real messages. All phone numbers, UPI IDs, and amounts are fictional.
+# Dataset composition: synthetic examples for development/testing only.
+# Do NOT use these metrics as real-world classifier performance claims.
+
+text,label,language,source
+"Dear Customer, Your SBI account has been blocked due to incomplete KYC. Update immediately at http://sbi-kyc-update.xyz or your account will be permanently suspended. Call 9876543210",banking_impersonation,english,sms
+"HDFC BANK: Your account will be closed in 24 hours. Click here to update KYC: http://hdfcbank-verify.net/kyc",banking_impersonation,english,sms
+"Alert: Your Axis Bank account is temporarily blocked. Complete verification at http://axisbank-kyc.in to avoid closure",banking_impersonation,english,sms
+"Your ICICI Bank account shows suspicious activity. Verify immediately: http://icicibank-secure.xyz/verify",banking_impersonation,english,sms
+"RBI NOTICE: Your bank account linked to illegal transactions. Contact RBI Cyber Cell 9988776655 immediately to avoid FIR",digital_arrest,english,sms
+"Congratulations! You have won Rs 5,00,000 in the SBI Lucky Draw. To claim your prize call 9876500001 and pay Rs 500 processing fee",reward_scam,english,sms
+"DEAR CUSTOMER: You have earned a cashback of Rs 2,500 from your recent transaction. Claim now: http://cashback-claim.in/verify",reward_scam,english,sms
+"Your KYC is expired. To continue using BHIM UPI services please update KYC immediately. Click: http://bhim-kyc-update.xyz",fake_kyc,english,sms
+"NPCI: Your UPI ID has been suspended. To reactivate send OTP to 9876543210 or visit http://npci-upi-restore.com",otp_theft,english,sms
+"Your OTP for SBI transaction is 847291. Share this OTP with our customer care executive for verification: 9988001122",otp_theft,english,sms
+"PhonePe: Your account will be deactivated. Call our helpline 9900000011 and share your OTP to verify your account",otp_theft,english,sms
+"A payment of Rs 1 has been sent to you. Please enter your UPI PIN to accept the payment",upi_scam,english,whatsapp
+"Your refund of Rs 499 is ready. To receive enter your UPI PIN and click accept on the payment request",upi_scam,english,whatsapp
+"GPay refund: Rs 2000 has been initiated. Click the link to accept: http://gpay-refund.xyz/accept?ref=XY12",upi_scam,english,sms
+"Amazon Order Refund: Your refund of Rs 899 has been processed. Click to receive: http://amazon-refund-india.xyz",upi_scam,english,sms
+"CBI Notice: Your mobile number is linked to money laundering. Appear before us tomorrow or face arrest. Call 9876500000 for settlement",digital_arrest,english,sms
+"ED Office: Your Aadhaar has been misused. You are under digital arrest. Pay Rs 50000 immediately to avoid FIR. Call 9800000001",digital_arrest,english,sms
+"CYBERCRIME CELL: Your IP address used for cybercrime. Pay fine Rs 25000 via UPI to avoid arrest. UPI: cybercell@ybl",digital_arrest,english,whatsapp
+"Delivery failed for your package. Pay Rs 35 customs fee at: http://dhl-india-customs.xyz/pay to reschedule",malicious_link,english,sms
+"Your Flipkart order is on hold. Click to verify your address: http://flipkart-verify-address.net",malicious_link,english,sms
+"Hi this is Rahul from SBI customer care. We noticed your account is blocked. Can you share your card number and OTP for verification?",otp_theft,english,whatsapp
+"URGENT: Your PAN card linked to illegal transactions. Pay Rs 10000 settlement fee at pan-verify.in to avoid legal action",digital_arrest,english,sms
+"आपका SBI खाता ब्लॉक हो गया है। KYC अपडेट करने के लिए यहाँ क्लिक करें: http://sbi-kyc.xyz",banking_impersonation,hindi,sms
+"आपने Rs 5,00,000 का इनाम जीता है। दावा करने के लिए 9876543211 पर call करें और Rs 500 का processing fee जमा करें",reward_scam,hindi,sms
+"आपका UPI खाता बंद हो जाएगा। अभी OTP share करें: 9800000002",otp_theft,hindi,sms
+"BHIM UPI: आपका KYC expire हो गया है। अभी update करें नहीं तो खाता बंद हो जाएगा: http://bhim-kyc.in",fake_kyc,hindi,sms
+"Your account statement for October 2024. Balance: Rs 45,230. For queries call SBI helpline 1800XXXXXXXXX",legitimate,english,sms
+"Payment of Rs 1,200 received from AMAZON SELLER on 15 Oct. Ref: TXN123456. HDFC Bank",legitimate,english,sms
+"Your electricity bill payment of Rs 850 is successful. Reference: BESCOM123456. Thank you for using HDFC Bank",legitimate,english,sms
+"OTP for login to your SBI YONO account is 738291. Valid for 10 minutes. Do NOT share with anyone",legitimate,english,sms
+"Your Flipkart order #FO123456 has been shipped. Expected delivery: 18 Oct. Track at flipkart.com/track",legitimate,english,sms
+"Credit Alert: Rs 15,000 credited to your account XX1234 on 01 Oct. Available balance: Rs 32,456. -ICICI Bank",legitimate,english,sms
+"Reminder: Your credit card payment of Rs 5,000 is due on 25 Oct. Pay now to avoid late fee. -Axis Bank",legitimate,english,sms
+"UPI payment of Rs 500 to ZOMATO successful. Ref: UPI20241001. PhonePe",legitimate,english,sms
+"Your mutual fund SIP of Rs 2,000 has been processed. Units allocated: 14.285. -Zerodha",legitimate,english,sms
+"Dear Rahul, your health insurance premium of Rs 8,500 has been auto-debited. Policy remains active. -Star Health",legitimate,english,sms
+

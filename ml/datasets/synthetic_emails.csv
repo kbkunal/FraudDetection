@@ -1,0 +1,21 @@
+# Synthetic Email Fraud Dataset
+# CyberShield Prototype — Clearly labelled synthetic data
+# NOT real emails. All addresses, domains, and amounts are fictional.
+
+subject,from_address,reply_to,body_preview,category,has_suspicious_urls,auth_note
+"Action Required: Verify Your SBI Account","security@sbi-alerts.xyz","support@sbibank-secure.net","Dear Customer, Your SBI account requires immediate verification. Click the link below to update your KYC within 24 hours or your account will be suspended.",banking_phishing,true,"Domain does not match official sbi.co.in"
+"HDFC Bank: Unusual Activity Detected","noreply@hdfcbank-secure.online","customercare@hdfc-verify.net","We have detected unusual login activity on your HDFC Bank account. Please verify your identity immediately.",banking_phishing,true,"Lookalike domain"
+"Important: Update Your ICICI Bank Credentials","alert@icicibank-india.net","","Your ICICI Bank account has been flagged. Click to verify: http://icicibank-verify.online/login",banking_phishing,true,"Mismatched reply-to"
+"RBI Circular: Submit Your Account Details","compliance@rbi-india.online","","The Reserve Bank of India requires all account holders to submit updated KYC information by October 31, 2024.",govt_impersonation,true,"Not official rbi.org.in domain"
+"Urgent: Income Tax Notice — AY 2024-25","incometax@it-dept-india.com","refund@taxreturns.xyz","You have a pending income tax refund of Rs 45,230. Click here to claim your refund by providing your bank details.",credential_theft,true,"Fake IT department domain"
+"Payment Invoice #INV-2024-1089 — Action Required","accounts@company-invoice.net","payments@overseas-vendor.com","Please find attached payment invoice for Rs 8,50,000. Please process payment to the new account below as our banking details have changed.",bec,false,"Reply-to redirects to different domain"
+"Wire Transfer Authorization — Urgent","cfo@yourcompany.com.frauddomain.net","","As per our earlier discussion, please wire USD 25,000 to the vendor account immediately. This is time-sensitive.",bec,false,"Domain spoofing company name"
+"Congratulations! You Won iPhone 15","lottery@mega-prize-india.com","claim@prizewinner.net","You have been selected as the lucky winner of an Apple iPhone 15. To claim your prize, pay Rs 999 shipping fee.",prize_scam,true,"Multiple redirecting URLs"
+"Aadhaar Verification Required","uidai-verify@aadhaar-update.org","","Your Aadhaar card requires immediate biometric verification. Failure to verify will result in deactivation.",govt_impersonation,true,"Not official uidai.gov.in"
+"Your Package Could Not Be Delivered","delivery@courier-india.net","","We attempted to deliver your package but were unable to. Please pay Rs 35 customs fee to reschedule delivery.",malicious_link,true,"Fake courier service"
+"Meeting Notes: Project Alpha","colleague@company.com","","Hi team, please find attached the meeting notes from today's project discussion. Let me know if you have any questions.",legitimate,false,"Legitimate internal email"
+"Your Amazon Order Has Shipped","shipment-tracking@amazon.in","","Your order #402-8234567-1234567 has shipped. Expected delivery: October 18, 2024.",legitimate,false,"Legitimate Amazon sender"
+"Monthly Account Statement — September 2024","statements@hdfcbank.com","","Please find your monthly account statement for September 2024 attached. Your account ending XX4521.",legitimate,false,"Legitimate HDFC domain"
+"Credit Card Bill Due Date Reminder","creditcard@axisbank.com","","Your Axis Bank credit card bill of Rs 12,456 is due on October 25, 2024.",legitimate,false,"Legitimate Axis Bank domain"
+"Verify Your Login — Security Code 847291","security@google.com","","Your Google verification code is 847291. This code expires in 10 minutes. Never share this code.",legitimate,false,"Legitimate Google 2FA"
+
